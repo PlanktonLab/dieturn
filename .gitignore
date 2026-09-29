@@ -1,0 +1,42 @@
+# Python
+.venv*/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# 模型權重(AGPL-3.0,另發於 HuggingFace)
+*.pt
+
+# 訓練/推論產物(可重生)
+ml/runs/
+ml/dataset/
+runs/
+
+# 航拍影像不進 git(約 2.7 GB/年度,用 imagery/fetch_ortho.py 重抓)
+# index.csv 必須留 —— 它是所有圖資的地理定位依據
+imagery/*/images/
+imagery/*/tiles/
+imagery/*/fetch.log
+imagery/*.pid
+imagery/*.out
+
+# 標註資料另行以 HuggingFace Datasets 發布;
+# 影像受來源條款約束,標註檔與分發包都不進 git。
+datasets/*
+!datasets/*.md
+label_round2/
+*.zip
+
+# 檢視用暫存圖
+geodata/output*/mapbox_check/
+
+# OSM 與縣市界線快取(可重抓)
+.cache/
+
+*.log
+
+# Local preparation and verification files
+work/
+RELEASE_CHECKLIST.md
